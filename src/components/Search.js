@@ -29,7 +29,8 @@ function Search() {
       if(bookName == ""){ // Se l' input è vuoto non fa niente altrimenti lo ricerca nell' api
         setResult([]);
       }else{
-        const apiKey = process.env.REACT_APP_API_KEY;
+        //const apiKey = process.env.REACT_APP_API_KEY;
+        const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
         let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
         let data = await rawData.json();
 
