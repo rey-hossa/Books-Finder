@@ -1,7 +1,6 @@
 
 import React, {useState} from 'react';
 import './App.css';
-import Search from "./components/Prova";
 import Home from "./components/Home";
 import Books from "./components/Books";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";

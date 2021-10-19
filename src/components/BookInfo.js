@@ -7,12 +7,12 @@ import bookmark from "./logo/bookmark.png";
 function BookInfo() { // Funzione per creare un array con il dato preso dall' api
 
   function arrayFilter(array, arrayList){
-    if(array === undefined){
+    if(array == undefined){
       arrayList[0] = "Unknown";
     }else{
       arrayList[0] = array[0];
       for(let i=1; i < array.length; i++ ){
-        if(array[i] === undefined){}else{ arrayList[i] = ", " + array[i]; }
+        if(array[i] == undefined){}else{ arrayList[i] = ", " + array[i]; }
       }
     }
   }
