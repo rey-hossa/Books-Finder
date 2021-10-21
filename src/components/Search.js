@@ -36,7 +36,7 @@ function Search() {
         //let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
         //let data = await rawData.json();
 
-        const data = await axios.get("/.netlify/functions/lambda?bookname="+bookName);
+        const data = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
 
         if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
