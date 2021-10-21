@@ -49,7 +49,7 @@ function BookInfo() { // Funzione per creare un array con il dato preso dall' ap
 
 
   return (
-    <>
+    <div className="info_page">
       <div className="book_info">
 
         <div className="book_info_container">
@@ -75,7 +75,7 @@ function BookInfo() { // Funzione per creare un array con il dato preso dall' ap
       <Link to="/books"> {/* Pulsante per tornare indietro */}
       <button className="back_button"><i className="fas fa-angle-left"></i> BACK</button>
       </Link>
-    </>
+    </div>
 
   );
 }
