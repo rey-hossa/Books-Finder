@@ -2,6 +2,7 @@ import './Search.css';
 import React, { useContext } from 'react';
 import {Context} from "../App";
 import {Link} from "react-router-dom";
+import axios from 'axios';
 
 require('dotenv').config();
 
@@ -30,9 +31,12 @@ function Search() {
         setResult([]);
       }else{
         //const apiKey = process.env.REACT_APP_API_KEY;
-        const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
-        let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
-        let data = await rawData.json();
+        //const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
+
+        //let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
+        //let data = await rawData.json();
+
+        const data = await axios.get("/.netlify/functions/lambda?bookname="+bookName);
 
         if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
