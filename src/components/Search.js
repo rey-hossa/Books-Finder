@@ -37,13 +37,13 @@ function Search() {
         //let data = await rawData.json();
 
         const data = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
-        console.log(data);
+        console.log(data.data);
 
-        if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
+        if(data.data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
           alert("Book not found");
         }else{
-          setResult(data.items);
+          setResult(data.data.items);
         }
 
       }
