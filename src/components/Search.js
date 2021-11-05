@@ -36,6 +36,8 @@ function Search() {
         //let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
         //let data = await rawData.json();
 
+        console.log(process.env);
+
         const data = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
         console.log(data.data);
 
