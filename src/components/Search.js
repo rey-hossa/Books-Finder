@@ -36,7 +36,6 @@ function Search() {
 
         if (process.env.NODE_ENV == "development"){
           const apiKey = process.env.REACT_APP_API_KEY;
-          //const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
 
           rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
           data = await rawData.json();
@@ -44,9 +43,6 @@ function Search() {
           rawData = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
           data = await rawData.data;
         }
-
-        console.log(process.env);
-        console.log(rawData);
 
         if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
