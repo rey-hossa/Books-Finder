@@ -30,22 +30,29 @@ function Search() {
       if(bookName == ""){ // Se l' input è vuoto non fa niente altrimenti lo ricerca nell' api
         setResult([]);
       }else{
-        //const apiKey = process.env.REACT_APP_API_KEY;
-        //const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
 
-        //let rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
-        //let data = await rawData.json();
+        let data;
+        let rawData;
+
+        if (process.env.NODE_ENV == "development"){
+          const apiKey = process.env.REACT_APP_API_KEY;
+          //const apiKey = "AIzaSyBz2QRNoxl41nROKIsWdY2Gziki2sh1wW4";
+
+          rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
+          data = await rawData.json();
+        }else if(process.env.NODE_ENV == "production"){
+          rawData = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
+          data = data.data;
+        }
 
         console.log(process.env);
+        //console.log(data.data);
 
-        const data = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
-        console.log(data.data);
-
-        if(data.data.items === undefined){ // Se non è stato trovato il libro manda l' alert
+        if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
           alert("Book not found");
         }else{
-          setResult(data.data.items);
+          setResult(data.items);
         }
 
       }
