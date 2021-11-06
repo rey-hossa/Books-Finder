@@ -42,7 +42,7 @@ function Search() {
           data = await rawData.json();
         }else if(process.env.NODE_ENV == "production"){
           rawData = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
-          data = data.data;
+          data = await data.data;
         }
 
         console.log(process.env);
