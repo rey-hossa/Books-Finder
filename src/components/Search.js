@@ -46,7 +46,7 @@ function Search() {
         }
 
         console.log(process.env);
-        //console.log(data.data);
+        console.log(rawData);
 
         if(data.items === undefined){ // Se non è stato trovato il libro manda l' alert
           setResult([]);
