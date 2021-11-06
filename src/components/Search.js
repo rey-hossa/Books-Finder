@@ -40,7 +40,7 @@ function Search() {
 
           rawData = await fetch("https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + apiKey +"&maxResults=40");
           data = await rawData.json();
-        }else{
+        }else if (process.env.NODE_ENV == "production"){
           rawData = await axios.get("/.netlify/functions/lambda?bookName="+bookName);
           data = await rawData.data;
         }
