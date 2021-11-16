@@ -12,18 +12,17 @@ function Search() {
   const [result, setResult] = resultState;
   const [bookInput, setBookInput] = bookInputState;
 
-  /*document.getElementById("input").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("search_button").click();
-    }
-  });*/
-  console.log(document.getElementById("input"));
-  console.log(document.getElementById("search_button"));
-
   function handleChange(event){ // A ogni digitazione dell' utente verra preso il valore e impostato in bookInput
     let input = event.target.value;
     setBookInput(input);
+
+    //Avvio ricerca al click del tasto invio
+    /*document.getElementById("input").addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+          document.getElementById("search_button").click();
+      }
+    });*/
   }
 
   async function handleBooks(){
@@ -65,10 +64,6 @@ function Search() {
     <div className="search">
       <input id="input" type="text" onChange={handleChange} value={bookInput} placeholder="Book Name or Author" /> {/* Il valore viene impostato con bookInput in questo modo rimane nell' input acnhe cambiando pagina */}
       <Link to="/books" style={{ textDecoration: 'none' }}><i id="search_button" className="fas fa-search" onClick={handleBooks}></i></Link>
-
-      {console.log(document.getElementById("input"))}
-      {console.log(document.getElementById("search_button"))}
-
     </div>
 
 
