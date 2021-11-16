@@ -65,7 +65,13 @@ function Search() {
     <div className="search">
       <input id="input" type="text" onChange={handleChange} value={bookInput} placeholder="Book Name or Author" /> {/* Il valore viene impostato con bookInput in questo modo rimane nell' input acnhe cambiando pagina */}
       <Link to="/books" style={{ textDecoration: 'none' }}><i id="search_button" className="fas fa-search" onClick={handleBooks}></i></Link>
+
+      {console.log(document.getElementById("input"))}
+      {console.log(document.getElementById("search_button"))}
+
     </div>
+
+
   );
 }
 
