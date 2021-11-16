@@ -12,12 +12,14 @@ function Search() {
   const [result, setResult] = resultState;
   const [bookInput, setBookInput] = bookInputState;
 
-  document.getElementById("input").addEventListener("keyup", function(event) {
+  /*document.getElementById("input").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("search_button").click();
     }
-  });
+  });*/
+  console.log(document.getElementById("input"));
+  console.log(document.getElementById("search_button"));
 
   function handleChange(event){ // A ogni digitazione dell' utente verra preso il valore e impostato in bookInput
     let input = event.target.value;
