@@ -1,6 +1,6 @@
 # Air Pollution Project
 
-![Alt text](dist/images/image.JPG "image")
+![Alt text](public/images/image.PNG "image")
 
 This project is an air pollution checker application, so with this app you can see the air pollution in the world.
 
