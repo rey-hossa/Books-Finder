@@ -19,7 +19,7 @@ Netlify
 
 ## Usage
 
-The usege is very simple, enter the name or author of the book you want and a list of books related to your search will appear, then by clicking on a book you can see more information about it, you can also read an extract from the book by clicking on the "preview" button.
+The usage is very simple, enter the name or author of the book you want and a list of books related to your search will appear, then by clicking on a book you can see more information about it, you can also read an extract from the book by clicking on the "preview" button.
 
 ## Contact
 Email: rey.hossa.rh@gmail.com
