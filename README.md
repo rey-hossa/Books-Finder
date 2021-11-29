@@ -1,29 +1,27 @@
-# Air Pollution Project
+# Books Finder Project
 
 ![Alt text](public/images/image.PNG "image")
 
-This project is an air pollution checker application, so with this app you can see the air pollution in the world.
+This project is a books finder application, so with this app you can search every existing book in the world.
 
 ## Getting Started
 
-To Starting using this Application, go to https://air-pollution-project.netlify.app on your favourite browser, or if you want to try it locally download the project and rename the ".env.sample" file in ".env" and edit this with your api key (get it from https://aqicn.org/data-platform/token/#/).
+To Starting using this Application, go to https://reysbooksfinder.netlify.app on your favourite browser, or if you want to try it locally download the project and rename the ".env.sample" file in ".env" and edit this with your api key (get it from "Google Books APIs").
 
 ## Tools Used
 
 Node npm
 
-Webpack
+React
 
 Netlify
 
 
 ## Usage
 
-The usege is very simple, enter the name of a city and it will appear the air pollution index, you can see more information by dragging the mouse cursor on the "i" button.
-
-Or you can allow geolocation when the page is loaded, then it will show you the air pollution index automatically for your position.
+The usage is very simple, enter the name or author of the book you want and a list of books related to your search will appear, then by clicking on a book you can see more information about it, you can also read an extract from the book by clicking on the "preview" button.
 
 ## Contact
 Email: rey.hossa.rh@gmail.com
 
-Project link: https://github.com/rey-hossa/Air-Pollution-Project-2.git
+Project link: https://github.com/rey-hossa/Books-Finder.git
