@@ -2,7 +2,8 @@ const axios = require('axios');
 
 exports.handler = async function (event, context) {
 
-, mnb  m
+  const API_KEY =  process.env.REACT_API_KEY;
+  const bookName = event.queryStringParameters.bookName;
 
   let uri = "https://www.googleapis.com/books/v1/volumes?q=" + bookName + "&key=" + API_KEY +"&maxResults=40";
 
