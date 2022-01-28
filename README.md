@@ -1,6 +1,6 @@
 # Books Finder Project
 
-![Alt text](public/src/images/cryptocoin.png "image")
+![Alt text](public/images/image.PNG "image")
 
 This project is a books finder application, so with this app you can search every existing book in the world.
 
